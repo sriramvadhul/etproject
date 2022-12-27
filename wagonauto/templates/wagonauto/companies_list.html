@@ -1,0 +1,115 @@
+{% extends "wagonauto/base.html" %}
+{% block body_block %}
+  <div class="container">
+    <h1>Select a company</h1>
+    <div class="jumbotron">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          {% for comp in company|slice:":3" %}
+            {% if comp.id == 2 %}
+              <td>
+                <a href="{% url 'wagonauto:suzukilist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Maruti {{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if comp.id == 3 %}
+              <td>
+                <a href="{% url 'wagonauto:hyundailist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if comp.id == 4 %}
+              <td>
+                <a href="{% url 'wagonauto:tatalist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+          <tr>
+          {% for comp in company|slice:"3:6" %}
+            {% if comp.id == 5 %}
+              <td>
+                <a href="{% url 'wagonauto:toyotalist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if comp.id == 6 %}
+              <td>
+                <a href="{% url 'wagonauto:mahindralist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if comp.id == 7 %}
+              <td>
+                <a href="{% url 'wagonauto:hondalist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+          <tr>
+          {% for comp in company|slice:"6:7" %}
+            {% if comp.id == 8 %}
+              <td>
+                <a href="{% url 'wagonauto:kialist' %}">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ comp.logo.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ comp.company_name }}</h4>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

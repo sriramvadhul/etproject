@@ -1,0 +1,148 @@
+{% extends "wagonauto/base.html" %}
+{% block body_block %}
+  <div class="container">
+    <br><h1>Select a car</h1><br>
+    <div class="jumbotron">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          {% for car in hyundai %}
+            {% if car.id == 7 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 8 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 9 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+          <tr>
+          {% for car in hyundai %}
+            {% if car.id == 10 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 11 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 12 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+          <tr>
+          {% for car in hyundai %}
+            {% if car.id == 13 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 14 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+            {% if car.id == 15 %}
+              <td>
+                <a href="{{ car.id }}/">
+                  <div class="card compcardclass">
+                    <img class="card-img-top compimgclass" src="{{ car.car_pic.url }}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ car.car_name }}</h4>
+                      <p class="card-text">{{ car.price }}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

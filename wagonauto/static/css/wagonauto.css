@@ -1,0 +1,10 @@
+.compimgclass{
+  height: 30vh;
+  width: 80%;
+  margin: 20px;
+  margin-left: 30px;
+}
+table td{
+  width: 15%;
+  text-align: center;
+}

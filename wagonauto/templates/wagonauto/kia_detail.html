@@ -1,0 +1,81 @@
+{% extends "wagonauto/base.html" %}
+{% block body_block %}
+<div class="container">
+  <img src="{{ kiadet.car_pic.url }}" alt="Card image" class="rounded mx-auto d-block">
+</div>
+<div class="container">
+  <h1>Kia {{ kiadet.car_name }}</h1>
+  <p>Ex-showroom price: {{ kiadet.price }}</p>
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <h5><a class="nav-link active" data-toggle="tab" href="#home">About</a></h5>
+    </li>
+    <li class="nav-item">
+      <h5><a class="nav-link" data-toggle="tab" href="#menu1">Engine & transmossion</a></h5>
+    </li>
+    <li class="nav-item">
+      <h5><a class="nav-link" data-toggle="tab" href="#menu2">Fuel & Performance</a></h5>
+    </li>
+    <li class="nav-item">
+      <h5><a class="nav-link" data-toggle="tab" href="#menu3">Dimentions & Capacity</a></h5>
+    </li>
+    <li class="nav-item">
+      <h5><a class="nav-link" data-toggle="tab" href="#menu4">Other Comforts</a></h5>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h4>Maruti Suzuki {{ kiadet.car_name }}</h4>
+      <p>{{ kiadet.about }}</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h4>Engine Type</h4>
+      <p>{{ kiadet.transmission_type }}</p>
+      <h4>Max power</h4>
+      <p>{{ kiadet.max_power }}</p>
+      <h4>Max Torque</h4>
+      <p>{{ kiadet.max_torque }}</p>
+      <h4>Number of Cylinders</h4>
+      <p>{{ kiadet.no_cylinders }}</p>
+      <h4>Valves per Cylinder</h4>
+      <p>{{ kiadet.valves_per_cylinder }}</p>
+      <h4>Transmission Type</h4>
+      <p>{{ kiadet.transmission_type }}</p>
+      <h4>Gear Box</h4>
+      <p>{{ kiadet.gear_box }}</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h4>Fuel Type</h4>
+      <p>{{ kiadet.fuel_type }}</p>
+      <h4>Mileage</h4>
+      <p>{{ kiadet.mileage }}</p>
+      <h4>Fuel Tank Capacity</h4>
+      <p>{{ kiadet.tank_capacity }}</p>
+      <h4>Emission Norm Compliance</h4>
+      <p>{{ kiadet.emission_norm }}</p>
+    </div>
+    <div id="menu3" class="container tab-pane fade"><br>
+      <h4>Length (mm)</h4>
+      <p>{{ kiadet.length }}</p>
+      <h4>Width (mm)</h4>
+      <p>{{ kiadet.width }}</p>
+      <h4>Height (mm)</h4>
+      <p>{{ kiadet.height }}</p>
+      <h4>Gross Weight (Kg)</h4>
+      <p>{{ kiadet.weight }}</p>
+      <h4>Boot Space</h4>
+      <p>{{ kiadet.boot_space }}</p>
+      <h4>Number of seats</h4>
+      <p>{{ kiadet.seating }}</p>
+    </div>
+    <div id="menu4" class="container tab-pane fade"><br>
+      <h4>Special features</h4>
+      <p>{{ kiadet.others }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
